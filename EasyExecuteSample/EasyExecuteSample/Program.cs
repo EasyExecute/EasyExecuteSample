@@ -12,7 +12,7 @@ namespace EasyExecuteSample
         static void Main(string[] args)
         {
             var service = new EasyExecuteLib.EasyExecute();
-            Enumerable.Range(0,3).ForEach(n=> Enumerable.Range(0, 3).ForEach(nn=>service.ExecuteAsync(nn.ToString(), "Hello world", Console.WriteLine).Wait()));
+            Parallel.ForEach(Enumerable.Range(0,3),n=> Parallel.ForEach(Enumerable.Range(0, 3),nn=>service.ExecuteAsync(nn.ToString(), "Hello world "+nn, Console.WriteLine).Wait()));
             ;
             Console.ReadKey();
         }
