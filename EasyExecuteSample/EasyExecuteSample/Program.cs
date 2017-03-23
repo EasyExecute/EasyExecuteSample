@@ -28,8 +28,9 @@ namespace EasyExecuteSample
                         // Do nothing with the data except read it.
                         // byte[] data = File.ReadAllBytes(f);
                        await service.ExecuteAsync(f, f, Console.WriteLine);
-                     var t=  await service.GetWorkHistoryAsync();
-                        t.Result.WorkHistory.ForEach(x=>Console.WriteLine(x.WorkerId+" : "+x.WorkerStatus.IsCompleted));
+                     var t=  await service.GetWorkLogAsync();
+                        t.Result.WorkLog.ForEach(Console.WriteLine);
+                        
                     }
                     catch (FileNotFoundException)
                     {

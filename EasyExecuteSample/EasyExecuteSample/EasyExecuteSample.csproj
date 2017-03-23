@@ -82,6 +82,11 @@
           <Private>True</Private>
           <Paket>True</Paket>
         </Reference>
+        <Reference Include="EasyExecute.ExecutionQuery">
+          <HintPath>..\packages\EasyExecute\lib\net45\EasyExecute.ExecutionQuery.dll</HintPath>
+          <Private>True</Private>
+          <Paket>True</Paket>
+        </Reference>
         <Reference Include="EasyExecute.Messages">
           <HintPath>..\packages\EasyExecute\lib\net45\EasyExecute.Messages.dll</HintPath>
           <Private>True</Private>
